@@ -1,0 +1,10 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About"
+  },
+  "home": {
+    "title": "Hello",
+    "description": "This is a multilingual Next.js site."
+  }
+}
