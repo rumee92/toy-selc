@@ -1,0 +1,163 @@
+.home-intro {
+  padding-top: 100px;
+  background: var(--color-white);
+}
+
+/* ── 상단 소개 텍스트 ── */
+.intro-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-16);
+  margin-bottom: var(--space-12);
+}
+
+.intro-heading {
+  flex: 1;
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+.intro-summary {
+  flex: 1;
+  padding-top: var(--space-2);
+}
+
+.intro-summary-title {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+}
+
+.intro-summary-desc {
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-bold);
+  margin-top: var(--space-2);
+  word-break: keep-all;
+}
+
+/* ── 카드 목록 ── */
+.intro-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+/* ── 카드 ── */
+.intro-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  cursor: pointer;
+}
+
+/* 배경 이미지 */
+.intro-card-img-wrap {
+  position: absolute;
+  inset: 0;
+  transition: filter 0.5s ease;
+}
+
+.intro-card:hover .intro-card-img-wrap {
+  filter: blur(6px);
+}
+
+/* 오버레이 */
+.intro-card-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  transition: background 0.5s ease;
+  z-index: 1;
+}
+
+.intro-card:hover .intro-card-overlay {
+  background: rgb(0 0 0 / 0.2);
+}
+
+/* 콘텐츠 */
+.intro-card-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-8);
+}
+
+.intro-card-title {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+}
+
+/* hover 시 나타나는 영역 */
+.intro-card-body {
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.intro-card:hover .intro-card-body {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-card-desc {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin-bottom: var(--space-5);
+  word-break: keep-all;
+}
+
+/* ── 버튼 ── */
+.intro-card-btns {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.intro-btn-outline,
+.intro-btn-solid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 var(--space-5);
+  border-radius: var(--radius-full);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.intro-btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: var(--color-white);
+}
+
+.intro-btn-outline:hover {
+  border-color: var(--color-white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.intro-btn-solid {
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: var(--color-white);
+}
+
+.intro-btn-solid:hover {
+  background: var(--color-primary-dark, #0051a8);
+  border-color: var(--color-primary-dark, #0051a8);
+}
