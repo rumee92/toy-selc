@@ -1,6 +1,7 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 import styled from "styled-components";
 import styles from "../page.module.css";
+import Button from "@/components/common/Button/Button";
 
 const StyledTitle = styled.h1`
   margin: 0;
@@ -22,14 +23,20 @@ const StyledBadge = styled.span`
 `;
 
 export default function HomePage() {
-  const t = useTranslations('home');
+  const t = useTranslations("home");
 
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <StyledBadge>styled-components</StyledBadge>
-        <StyledTitle>{t('title')}</StyledTitle>
-        <p className={styles.description}>{t('description')}</p>
+        <StyledTitle>{t("title")}</StyledTitle>
+        <p className={styles.description}>{t("description")}</p>
+        <Button variant="solid">상담/문의</Button>
+        <Button variant="outline">HVAC서비스 소개</Button>
+        <Button variant="text">바로가기</Button>
+        <Button variant="icon" size="md">
+          ›
+        </Button>
       </main>
     </div>
   );
