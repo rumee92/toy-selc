@@ -50,22 +50,6 @@
   --color-slate-600: #475569;
 
   /* ============================================
-    Semantic (용도별)
-    ============================================ */
-  --color-text: var(--color-gray-900);
-  --color-text-secondary: var(--color-gray-500);
-  --color-text-muted: var(--color-gray-400);
-  --color-text-inverse: var(--color-white);
-  --color-text-link: var(--color-primary);
-
-  --color-bg: var(--color-white);
-  --color-bg-subtle: var(--color-gray-50);
-  --color-bg-muted: var(--color-gray-100);
-
-  --color-border: var(--color-gray-200);
-  --color-border-strong: var(--color-gray-300);
-
-  /* ============================================
     Typography
     ============================================ */
   --font-sans: 'Samsung One Korean', sans-serif;

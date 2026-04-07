@@ -1,8 +1,4 @@
 {
-  "common": {
-    "home": "홈",
-    "about": "소개"
-  },
   "home": {
     "title": "안녕하세요",
     "description": "Next.js 다국어 사이트입니다."

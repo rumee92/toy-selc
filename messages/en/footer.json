@@ -1,0 +1,97 @@
+{
+  "util": {
+    "delivery": "Delivery Tracking",
+    "hvacContact": "HVAC Consultation",
+    "hvacContract": "HVAC Contract Info",
+    "voice": "Customer Feedback",
+    "about": "About Us",
+    "recruit": "Careers"
+  },
+  "sitemap": {
+    "service": {
+      "title": "Services",
+      "delivery": {
+        "subtitle": "Product Delivery & Installation",
+        "b2c": "B2C Delivery & Installation",
+        "move": "Relocation Installation",
+        "reform": "Furniture Reform Service",
+        "logistics": "Automated Logistics Center",
+        "builtin": "Built-in/Signage",
+        "material": "Service Material Logistics"
+      },
+      "hvac": {
+        "subtitle": "HVAC Services",
+        "maintenance": "System AC Maintenance",
+        "cleaning": "System AC Cleaning",
+        "central": "Central AC Maintenance",
+        "smartthings": "SmartThings Pro",
+        "esi": "ESI",
+        "parts": "Installation Parts Sales"
+      },
+      "export": {
+        "subtitle": "Import/Export Logistics",
+        "import": "Product Import/Export Service",
+        "forwarding": "Forwarding",
+        "trade": "Intermediary Trade"
+      }
+    },
+    "hvac": {
+      "title": "HVAC Services",
+      "overview": "HVAC Service Overview",
+      "maintenance": "Maintenance / Repair / Cleaning",
+      "process": "Service Process",
+      "sacApply": "SAC Service Application",
+      "sacCleaning": "SAC Cleaning Application",
+      "consult": "Consultation/Inquiry",
+      "contract": "Contract Info Lookup",
+      "faq": "FAQ"
+    },
+    "support": {
+      "title": "Customer Support",
+      "delivery": "Delivery Tracking",
+      "inquiry": "1:1 Inquiry",
+      "faq": "FAQ",
+      "notice": "Notices / News",
+      "voice": "Customer Feedback"
+    },
+    "partner": {
+      "title": "Partner Services",
+      "samsung": "Samsung.com Linked Service",
+      "store": "Samsung Store Linked Service",
+      "service": "Samsung Electronics Service Linked Service",
+      "care": "Care+ / Subscription / Furniture Reform Guide"
+    },
+    "news": {
+      "title": "Events/News",
+      "promotion": "Promotions/Events",
+      "news": "News",
+      "repurchase": "Repurchase Certification"
+    },
+    "about": {
+      "title": "About Us",
+      "info": "Company Info",
+      "ceo": "CEO Message",
+      "ethics": "Ethics Management",
+      "social": "Social Contribution",
+      "safety": "Safety & Health",
+      "network": "Network & Infrastructure",
+      "recruitTitle": "Careers",
+      "recruitGuide": "Recruitment Guide",
+      "recruitPost": "Job Postings",
+      "apply": "Apply",
+      "hrSystem": "HR System"
+    }
+  },
+  "policy": {
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy",
+    "contact": "Contact us",
+    "familySite": "Family Site"
+  },
+  "info": {
+    "address": "2F, Samsung Electronics Logitech Co., Ltd., 290 Samsung-ro, Yeongtong-gu, Suwon-si, Gyeonggi-do\u00a0\u00a0CEO: Kim Yeon-seong\u00a0\u00a0Business Registration No.: 124-81-55381",
+    "tel": "Main: 031-270-3650 [ ※ Hearing-impaired counseling: 010-4912-3367 (Android Video Call), Weekdays 09:00~12:00, 13:00~17:00 ]",
+    "install": "Relocation/Reinstallation Inquiry: 1588-4190",
+    "copyright": "Copyright © 2026. SAMSUNG ELECTRONICS LOGITECH Corporation. All Rights Reserved"
+  }
+}

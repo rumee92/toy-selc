@@ -1,4 +1,62 @@
-@import "../styles/tokens.css";
+@import '../styles/tokens.css';
+
+/* ========================================
+  Samsung One Korean
+  ======================================== */
+
+@font-face {
+  font-family: 'Samsung One Korean';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/fonts/SamsungOneKorean-400.woff2') format('woff2'),
+    url('/fonts/SamsungOneKorean-400.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Samsung One Korean';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('/fonts/SamsungOneKorean-500.woff2') format('woff2'),
+    url('/fonts/SamsungOneKorean-500.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Samsung One Korean';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url('/fonts/SamsungOneKorean-700.woff2') format('woff2'),
+    url('/fonts/SamsungOneKorean-700.woff') format('woff');
+  font-display: swap;
+}
+
+/* ========================================
+  Samsung Sharp Sans
+  ======================================== */
+
+@font-face {
+  font-family: 'Samsung Sharp Sans';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/fonts/SamsungSharpSans.woff2') format('woff2'),
+    url('/fonts/SamsungSharpSans.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Samsung Sharp Sans';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url('/fonts/SamsungSharpSans-Bold.woff2') format('woff2'),
+    url('/fonts/SamsungSharpSans-Bold.woff') format('woff');
+  font-display: swap;
+}
 
 /* ==========================================
   Modern Reset.css
@@ -104,6 +162,17 @@ select {
 }
 
 /* ==========================================
+  레이아웃 유틸리티
+  ========================================== */
+
+.inner {
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================
   접근성 유틸리티
   ========================================== */
 
@@ -118,62 +187,4 @@ select {
   white-space: nowrap;
   border: 0;
   clip-path: inset(50%);
-}
-
-/* ========================================
-  Samsung One Korean
-  ======================================== */
-
-@font-face {
-  font-family: "Samsung One Korean";
-  font-style: normal;
-  font-weight: 400;
-  src:
-    url("/fonts/SamsungOneKorean-400.woff2") format("woff2"),
-    url("/fonts/SamsungOneKorean-400.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Samsung One Korean";
-  font-style: normal;
-  font-weight: 500;
-  src:
-    url("/fonts/SamsungOneKorean-500.woff2") format("woff2"),
-    url("/fonts/SamsungOneKorean-500.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Samsung One Korean";
-  font-style: normal;
-  font-weight: 700;
-  src:
-    url("/fonts/SamsungOneKorean-700.woff2") format("woff2"),
-    url("/fonts/SamsungOneKorean-700.woff") format("woff");
-  font-display: swap;
-}
-
-/* ========================================
-  Samsung Sharp Sans
-  ======================================== */
-
-@font-face {
-  font-family: "Samsung Sharp Sans";
-  font-style: normal;
-  font-weight: 400;
-  src:
-    url("/fonts/SamsungSharpSans.woff2") format("woff2"),
-    url("/fonts/SamsungSharpSans.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Samsung Sharp Sans";
-  font-style: normal;
-  font-weight: 700;
-  src:
-    url("/fonts/SamsungSharpSans-Bold.woff2") format("woff2"),
-    url("/fonts/SamsungSharpSans-Bold.woff") format("woff");
-  font-display: swap;
 }

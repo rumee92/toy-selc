@@ -1,0 +1,97 @@
+{
+  "util": {
+    "delivery": "배송조회",
+    "hvacContact": "HVAC 상담 문의",
+    "hvacContract": "HVAC 계약정보",
+    "voice": "고객의 소리",
+    "about": "회사소개",
+    "recruit": "채용정보"
+  },
+  "sitemap": {
+    "service": {
+      "title": "서비스 소개",
+      "delivery": {
+        "subtitle": "제품배송 설치 서비스",
+        "b2c": "B2C 배달설치",
+        "move": "이전설치",
+        "reform": "가구장 리폼서비스",
+        "logistics": "자동화 물류센터",
+        "builtin": "빌트인/사이니지",
+        "material": "서비스자재 물류"
+      },
+      "hvac": {
+        "subtitle": "HVAC 서비스",
+        "maintenance": "시스템에어컨 유지보수",
+        "cleaning": "시스템에어컨 세척",
+        "central": "중앙공조 유지보수",
+        "smartthings": "SmartThings Pro",
+        "esi": "ESI",
+        "parts": "설치자재 판매"
+      },
+      "export": {
+        "subtitle": "수출입 물류",
+        "import": "제품 수출입 서비스",
+        "forwarding": "포워딩",
+        "trade": "중계무역"
+      }
+    },
+    "hvac": {
+      "title": "HVAC 서비스",
+      "overview": "HVAC 서비스 개요",
+      "maintenance": "유지보수 / 수리 / 세척",
+      "process": "서비스 절차",
+      "sacApply": "SAC 서비스 접수",
+      "sacCleaning": "SAC 세척접수",
+      "consult": "상담/문의",
+      "contract": "계약정보 조회",
+      "faq": "FAQ"
+    },
+    "support": {
+      "title": "고객지원",
+      "delivery": "배송조회",
+      "inquiry": "1:1 문의",
+      "faq": "자주 묻는 질문",
+      "notice": "공지사항 / 뉴스",
+      "voice": "고객의 소리"
+    },
+    "partner": {
+      "title": "관계사 서비스",
+      "samsung": "삼성닷컴 연계 서비스",
+      "store": "삼성스토어 연계 서비스",
+      "service": "삼성전자서비스 연계 서비스",
+      "care": "케어플러스 / 구독 / 가구장리폼 안내"
+    },
+    "news": {
+      "title": "이벤트/뉴스",
+      "promotion": "프로모션/이벤트",
+      "news": "뉴스",
+      "repurchase": "재구매인증"
+    },
+    "about": {
+      "title": "회사소개",
+      "info": "회사정보",
+      "ceo": "CEO인사말",
+      "ethics": "윤리경영",
+      "social": "사회공헌",
+      "safety": "안전보건",
+      "network": "네트워크 및 인프라",
+      "recruitTitle": "인재채용",
+      "recruitGuide": "채용안내",
+      "recruitPost": "채용공고",
+      "apply": "입사지원",
+      "hrSystem": "인사제도"
+    }
+  },
+  "policy": {
+    "terms": "이용약관",
+    "privacy": "개인정보처리방침",
+    "contact": "Contact us",
+    "familySite": "Family Site"
+  },
+  "info": {
+    "address": "경기도 수원시 영동구 삼성로 290 (삼성전자(주)CS아카데미) 2층 삼성전자로지텍 주식회사\u00a0\u00a0대표이사 김연성\u00a0\u00a0사업자등록번호 : 124-81-55381",
+    "tel": "대표번호 : 031-270-3650 [ ※ 청각장애인전용 수아상담 : 010-4912-3367 (Android 영상통화), 평일 09:00 ~12:00, 13:00~17:00 ]",
+    "install": "이전/재설치 상담 : 1588-4190",
+    "copyright": "Copyright © 2026. SAMSUNG ELECTRONICS LOGITECH Corporation. All Rights Reserved"
+  }
+}

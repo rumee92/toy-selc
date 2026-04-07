@@ -1,0 +1,169 @@
+.footer {
+  width: 100%;
+  background: var(--color-white);
+  border-top: 1px solid var(--color-gray-200);
+}
+
+/* ── 유틸리티 바 ── */
+.footer-util {
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.footer-util-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-8) 0;
+}
+
+.footer-util-list a {
+  font-size: 1rem;
+  color: var(--color-gray-800);
+  transition: color var(--transition-base);
+}
+
+.footer-util-list a:hover {
+  color: var(--color-primary);
+}
+
+.footer-util-external::after {
+  content: '↗';
+  margin-left: 2px;
+}
+
+/* ── 사이트맵 ── */
+.footer-sitemap {
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.footer-sitemap-inner {
+  display: flex;
+  gap: 0;
+}
+
+.footer-col {
+  flex: 1;
+  padding: var(--space-10) var(--space-6);
+  border-right: 1px solid var(--color-gray-200);
+}
+
+.footer-col:first-child {
+  padding-left: 0;
+}
+
+.footer-col:last-child {
+  border-right: none;
+}
+
+.footer-col--wide {
+  flex: 2;
+}
+
+.footer-col-title {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-5);
+}
+
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer-col a {
+  font-size: 0.8125rem;
+  color: var(--color-gray-700);
+  transition: color var(--transition-base);
+}
+
+.footer-col a:hover {
+  color: var(--color-primary);
+}
+
+/* 서비스소개 2단 내부 */
+.footer-col-inner {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.footer-col-inner > div {
+  flex: 1;
+}
+
+/* 그룹 간격 */
+.footer-col-group + .footer-col-group {
+  margin-top: var(--space-6);
+}
+
+/* 소제목 */
+.footer-col-subtitle {
+  font-size: 0.8125rem;
+  color: var(--color-gray-500);
+  margin-bottom: var(--space-2);
+}
+
+/* ── 하단 바 ── */
+.footer-bottom {
+  padding: var(--space-6) 0 var(--space-8);
+}
+
+.footer-policy {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+.footer-policy a {
+  font-size: 0.875rem;
+  color: var(--color-gray-700);
+  transition: color var(--transition-base);
+}
+
+.footer-policy a:hover {
+  color: var(--color-primary);
+}
+
+.footer-policy--em {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary) !important;
+}
+
+.footer-family-site {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 0.875rem;
+  color: var(--color-gray-700);
+}
+
+.footer-family-site-icon {
+  display: inline-block;
+  width: 10px;
+  height: 6px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--color-gray-700);
+}
+
+.footer-info {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+
+.footer-info p {
+  font-size: 0.8125rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+.footer-copy {
+  font-size: 0.8125rem;
+  color: var(--color-gray-600);
+}

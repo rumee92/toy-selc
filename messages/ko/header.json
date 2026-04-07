@@ -1,0 +1,49 @@
+{
+  "util": {
+    "delivery": "배송조회",
+    "hvacContact": "HVAC문의",
+    "recruit": "채용"
+  },
+  "lang": {
+    "ko": "KR",
+    "en": "EN"
+  },
+  "gnb": {
+    "service": "서비스소개",
+    "hvac": "HVAC 서비스",
+    "partner": "관계사 서비스",
+    "support": "고객지원",
+    "news": "이벤트/뉴스",
+    "about": "회사소개"
+  },
+  "submenu": {
+    "delivery": {
+      "title": "제품배송 설치",
+      "b2c": "B2C 배달설치",
+      "move": "이전설치",
+      "reform": "가구장리폼서비스",
+      "logistics": "자동화물류센터",
+      "builtin": "빌트인/사이니지",
+      "material": "서비스자재 물류"
+    },
+    "hvac": {
+      "title": "HVAC 서비스",
+      "maintenance": "시스템에어컨 유지보수",
+      "cleaning": "시스템에어컨 세척",
+      "central": "중앙공조 유지보수",
+      "smartthings": "SmartThings Pro",
+      "esi": "ESI",
+      "parts": "설치자재 판매"
+    },
+    "export": {
+      "title": "수출입 물류",
+      "import": "제품 수출입 서비스",
+      "forwarding": "포워딩",
+      "trade": "중계무역"
+    }
+  },
+  "actions": {
+    "search": "검색",
+    "mypage": "마이페이지"
+  }
+}

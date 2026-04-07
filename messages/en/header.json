@@ -1,0 +1,49 @@
+{
+  "util": {
+    "delivery": "Delivery Tracking",
+    "hvacContact": "HVAC Inquiry",
+    "recruit": "Careers"
+  },
+  "lang": {
+    "ko": "KR",
+    "en": "EN"
+  },
+  "gnb": {
+    "service": "Services",
+    "hvac": "HVAC Services",
+    "partner": "Partner Services",
+    "support": "Customer Support",
+    "news": "Events/News",
+    "about": "About Us"
+  },
+  "submenu": {
+    "delivery": {
+      "title": "Product Delivery & Installation",
+      "b2c": "B2C Delivery & Installation",
+      "move": "Relocation Installation",
+      "reform": "Furniture Reform Service",
+      "logistics": "Automated Logistics Center",
+      "builtin": "Built-in/Signage",
+      "material": "Service Material Logistics"
+    },
+    "hvac": {
+      "title": "HVAC Services",
+      "maintenance": "System AC Maintenance",
+      "cleaning": "System AC Cleaning",
+      "central": "Central AC Maintenance",
+      "smartthings": "SmartThings Pro",
+      "esi": "ESI",
+      "parts": "Installation Parts Sales"
+    },
+    "export": {
+      "title": "Import/Export Logistics",
+      "import": "Product Import/Export Service",
+      "forwarding": "Forwarding",
+      "trade": "Intermediary Trade"
+    }
+  },
+  "actions": {
+    "search": "Search",
+    "mypage": "My Page"
+  }
+}

@@ -49,7 +49,6 @@ next-env.d.ts
 .github/copilot-*
 
 # Editor
-.vscode/
 .idea/
 *.suo
 *.ntvs*

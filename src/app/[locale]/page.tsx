@@ -1,42 +1,21 @@
-import { useTranslations } from "next-intl";
-import styled from "styled-components";
-import styles from "../page.module.css";
-import Button from "@/components/common/Button/Button";
-
-const StyledTitle = styled.h1`
-  margin: 0;
-  font-size: 2rem;
-  line-height: 1.2;
-  color: #0f172a;
-`;
-
-const StyledBadge = styled.span`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #0b3b2e;
-  background: #d1fae5;
-`;
+import { useTranslations } from 'next-intl';
+import Button from '@/components/common/Button/Button';
+import Tab from '@/components/common/Tab/Tab';
 
 export default function HomePage() {
-  const t = useTranslations("home");
+  const t = useTranslations('home');
 
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <StyledBadge>styled-components</StyledBadge>
-        <StyledTitle>{t("title")}</StyledTitle>
-        <p className={styles.description}>{t("description")}</p>
+    <div>
+      <main>
+        <p>{t('description')}</p>
         <Button variant="solid">상담/문의</Button>
         <Button variant="outline">HVAC서비스 소개</Button>
         <Button variant="text">바로가기</Button>
         <Button variant="icon" size="md">
           ›
         </Button>
+        <Tab items={['뉴스', '이벤트/프로모션', '채용']} />
       </main>
     </div>
   );
