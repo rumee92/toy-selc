@@ -1,0 +1,183 @@
+.hvac-service {
+  margin-top: 100px;
+}
+
+.hvac-inner {
+  position: relative;
+  background-color: var(--color-black);
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 215px 0 90px;
+}
+
+/* ── 상단 배경 이미지 ── */
+.hvac-inner::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 470px;
+  background-image:
+    linear-gradient(to bottom, rgb(0 0 0 / 0.25) 0%, rgb(0 0 0 / 0.92) 80%, #000 100%),
+    url(/images/main/hvac-bg.webp);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+/* ── 헤더 텍스트 ── */
+.hvac-header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hvac-title {
+  font-size: 48px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  letter-spacing: -0.02em;
+  font-family: var(--font-sharp);
+}
+
+.hvac-desc {
+  font-size: 28px;
+  margin-top: 20px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+}
+
+/* ── 슬라이더 래퍼 ── */
+.hvac-slider-wrap {
+  position: relative;
+  z-index: 1;
+  margin-top: 100px;
+  padding: 0 120px;
+}
+
+.hvac-swiper {
+  overflow: visible;
+}
+
+/* ── 슬라이드 ── */
+.hvac-slide {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hvac-slide-img-wrap {
+  position: relative;
+  flex: 0 0 64%;
+  aspect-ratio: 587 / 338;
+}
+
+.hvac-card-left {
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
+}
+
+.hvac-slide-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0 0 40px;
+  background: var(--color-primary);
+}
+
+.hvac-slide-title {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  color: var(--color-white);
+  letter-spacing: -0.02em;
+}
+
+.hvac-slide-desc {
+  margin-top: 6px;
+  font-size: 15px;
+  line-height: 1.46;
+  color: var(--color-white);
+}
+
+.hvac-slide-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  height: 40px;
+  padding: 0 var(--space-5);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  color: var(--color-white);
+  align-self: flex-start;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.hvac-slide-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--color-white);
+}
+
+/* ── 컨트롤 (페이지네이션 + 내비게이션) ── */
+.hvac-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-8);
+  gap: var(--space-6);
+}
+
+/* 프로그레스바 페이지네이션 */
+.hvac-pagination {
+  flex: 1;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  position: relative;
+}
+
+/* Swiper가 주입하는 progressbar 핸들 */
+.hvac-pagination :global(.swiper-pagination-progressbar-fill) {
+  background: var(--color-white);
+  border-radius: 2px;
+}
+
+/* 내비게이션 버튼 */
+.hvac-nav {
+  display: flex;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.hvac-nav-prev,
+.hvac-nav-next {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--color-white);
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.hvac-nav-prev:hover,
+.hvac-nav-next:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-white);
+}
+
+.hvac-nav-prev:disabled,
+.hvac-nav-next:disabled {
+  opacity: 0.3;
+  cursor: default;
+}

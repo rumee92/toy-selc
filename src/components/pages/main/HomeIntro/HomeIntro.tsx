@@ -41,12 +41,12 @@ export default function HomeIntro() {
       <div className="inner">
         {/* 상단 소개 텍스트 */}
         <div className={styles['intro-header']}>
-          <h2 id="intro-heading" className={styles['intro-heading']}>
+          <h2 id="intro-heading" className={styles['intro-heading']} data-aos="fade-up">
             고객이 감동하는 최상의 물류서비스를
             <br />
             제공하는 삼성전자로지텍입니다.
           </h2>
-          <div className={styles['intro-summary']}>
+          <div className={styles['intro-summary']} data-aos="fade-up" data-aos-delay="200">
             <strong className={styles['intro-summary-title']}>Quality, CS, Efficiency</strong>
             <p className={styles['intro-summary-desc']}>
               당사의 주요 물류서비스는 삼성전자 전 생산제품 및 서비스 자재를 대상으로 국내판매물류,
@@ -58,8 +58,13 @@ export default function HomeIntro() {
 
         {/* 카드 영역 */}
         <ul className={styles['intro-cards']} role="list">
-          {cards.map((card) => (
-            <li key={card.id} className={styles['intro-card']}>
+          {cards.map((card, index) => (
+            <li
+              key={card.id}
+              className={styles['intro-card']}
+              data-aos="fade-up"
+              data-aos-delay={500 + index * 150}
+            >
               {/* 배경 이미지 */}
               <div className={styles['intro-card-img-wrap']} aria-hidden="true">
                 <Image
