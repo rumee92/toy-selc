@@ -7,12 +7,26 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import styles from './HvacService.module.css';
 
-const slides = [
+type Desc = { type: 'text'; value: string } | { type: 'list'; items: string[] };
+
+const slides: {
+  id: string;
+  img: string;
+  title: string;
+  desc: Desc;
+  subTitle: string;
+  subDesc: string;
+  link: { label: string; href: string };
+}[] = [
   {
     id: 'overview',
     img: '/images/main/hvac-img-01.webp',
     title: 'HVAC서비스 개요',
-    desc: '시스템 에어컨 운영에 필요한 유지보수\n수리, 제공하며 B2B고객의 사업장 운영 환경을\n전문적으로 지원합니다.',
+    desc: {
+      type: 'text',
+      value:
+        '시스템 에어컨 운영에 필요한 유지보수\n수리, 제공하며 B2B고객의 사업장 운영 환경을\n전문적으로 지원합니다.',
+    },
     subTitle: '상담/문의',
     subDesc: '서비스 내용과 이용가능 여부를\n먼저 상담하고 싶다면 문의를\n남겨주세요',
     link: { label: '서비스 개요', href: '#' },
@@ -21,7 +35,14 @@ const slides = [
     id: 'consult',
     img: '/images/main/hvac-img-02.webp',
     title: '유지보수/수리/세척',
-    desc: '유지보수\n운영 안정성과 설비 효율을 높입니다.\n수리\n장비이슈에 신속하게 대응합니다.\n세척\n설비위생과 운영환경을 개선합니다.',
+    desc: {
+      type: 'list',
+      items: [
+        '유지보수\n운영 안정성과 설비 효율을 높입니다.',
+        '수리\n장비이슈에 신속하게 대응합니다.',
+        '세척\n설비위생과 운영환경을 개선합니다.',
+      ],
+    },
     subTitle: '상담/문의',
     subDesc: '서비스 내용과 이용가능 여부를\n먼저 상담하고 싶다면 문의를\n남겨주세요.',
     link: { label: '상담/문의', href: '#' },
@@ -30,7 +51,11 @@ const slides = [
     id: 'maintenance',
     img: '/images/main/hvac-img-03.webp',
     title: '서비스 절차 안내',
-    desc: '시스템 에어컨 운영에 필요한 유지보수\n수리, 제공하며 B2B고객의 사업장 운영 환경을\n전문적으로 지원합니다.',
+    desc: {
+      type: 'text',
+      value:
+        '시스템 에어컨 운영에 필요한 유지보수\n수리, 제공하며 B2B고객의 사업장 운영 환경을\n전문적으로 지원합니다.',
+    },
     subTitle: '유지보수/수리/세척',
     subDesc:
       '유지보수\n운영 안정성과 설비 효율을 높입니다.\n수리\n장비이슈에 신속하게 대응합니다.\n세척\n설비위생과 운영환경을 개선합니다.',
@@ -84,7 +109,26 @@ export default function HvacService() {
                     />
                     <div className={styles['hvac-card-left']}>
                       <h3 className={styles['hvac-card-title']}>{slide.title}</h3>
-                      <p className={styles['hvac-card-desc']}>{slide.desc}</p>
+                      {slide.desc.type === 'list' ? (
+                        <ul className={styles['hvac-card-list']}>
+                          {slide.desc.items.map((item) => (
+                            <li key={item}>
+                              {item.split('\n').map((line, i) => (
+                                <span key={i}>{line}<br /></span>
+                              ))}
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p className={styles['hvac-card-desc']}>
+                          {slide.desc.value.split('\n').map((line, i) => (
+                            <span key={i}>
+                              {line}
+                              <br />
+                            </span>
+                          ))}
+                        </p>
+                      )}
                     </div>
                   </div>
                   <div className={styles['hvac-slide-content']}>
