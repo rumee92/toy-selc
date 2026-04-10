@@ -9,14 +9,18 @@ import styles from './HvacService.module.css';
 
 type Desc = { type: 'text'; value: string } | { type: 'list'; items: string[] };
 
+type SubItem = {
+  subTitle: string;
+  subDesc: string;
+  link: { label: string; href: string };
+};
+
 const slides: {
   id: string;
   img: string;
   title: string;
   desc: Desc;
-  subTitle: string;
-  subDesc: string;
-  link: { label: string; href: string };
+  subs: SubItem[];
 }[] = [
   {
     id: 'overview',
@@ -27,9 +31,13 @@ const slides: {
       value:
         '시스템 에어컨 운영에 필요한 유지보수\n수리, 제공하며 B2B고객의 사업장 운영 환경을\n전문적으로 지원합니다.',
     },
-    subTitle: '상담/문의',
-    subDesc: '서비스 내용과 이용가능 여부를\n먼저 상담하고 싶다면 문의를\n남겨주세요',
-    link: { label: '서비스 개요', href: '#' },
+    subs: [
+      {
+        subTitle: '상담/문의',
+        subDesc: '서비스 내용과 이용가능 여부를\n먼저 상담하고 싶다면 문의를\n남겨주세요',
+        link: { label: '서비스 개요', href: '#' },
+      },
+    ],
   },
   {
     id: 'consult',
@@ -43,23 +51,39 @@ const slides: {
         '세척\n설비위생과 운영환경을 개선합니다.',
       ],
     },
-    subTitle: '상담/문의',
-    subDesc: '서비스 내용과 이용가능 여부를\n먼저 상담하고 싶다면 문의를\n남겨주세요.',
-    link: { label: '상담/문의', href: '#' },
+    subs: [
+      {
+        subTitle: 'SAC서비스 접수',
+        subDesc: '유지보수 및 일반 서비스 요청을\n온라인으로 접수할 수 있습니다.',
+        link: { label: '서비스 접수하기', href: '#' },
+      },
+      {
+        subTitle: '세척접수',
+        subDesc: '세척이 필요한 설비에 대해\n별도접수경로로 빠르게 요청할 수 있습니다.',
+        link: { label: '세척 접수하기', href: '#' },
+      },
+    ],
   },
   {
     id: 'maintenance',
     img: '/images/main/hvac-img-03.webp',
     title: '서비스 절차 안내',
     desc: {
-      type: 'text',
-      value:
-        '시스템 에어컨 운영에 필요한 유지보수\n수리, 제공하며 B2B고객의 사업장 운영 환경을\n전문적으로 지원합니다.',
+      type: 'list',
+      items: [
+        '서비스이해\n필요한 HVAC서비스 범위를 확인합니다.',
+        '상담/문의\n사업장 환경과 요청 내용을 전달 합니다/',
+        '접수진행\n서비스접수 또는 세척접수를 등록합니다.',
+        '후속지원\n절차에따라 운영 지원이 이어집니다.',
+      ],
     },
-    subTitle: '유지보수/수리/세척',
-    subDesc:
-      '유지보수\n운영 안정성과 설비 효율을 높입니다.\n수리\n장비이슈에 신속하게 대응합니다.\n세척\n설비위생과 운영환경을 개선합니다.',
-    link: { label: '서비스 신청', href: '#' },
+    subs: [
+      {
+        subTitle: '계약정보 조회',
+        subDesc: '유지보수 계약고객은\n계약기간, 대상설비, 서비스범위를 확인\n하실 수 있습니다.',
+        link: { label: '계약정보 확인', href: '#' },
+      },
+    ],
   },
 ];
 
@@ -103,7 +127,7 @@ export default function HvacService() {
                   <div className={styles['hvac-slide-img-wrap']}>
                     <Image
                       src={slide.img}
-                      alt={slide.subTitle}
+                      alt={slide.title}
                       fill
                       style={{ objectFit: 'cover' }}
                     />
@@ -114,7 +138,10 @@ export default function HvacService() {
                           {slide.desc.items.map((item) => (
                             <li key={item}>
                               {item.split('\n').map((line, i) => (
-                                <span key={i}>{line}<br /></span>
+                                <span key={i}>
+                                  {line}
+                                  <br />
+                                </span>
                               ))}
                             </li>
                           ))}
@@ -132,18 +159,22 @@ export default function HvacService() {
                     </div>
                   </div>
                   <div className={styles['hvac-slide-content']}>
-                    <h4 className={styles['hvac-slide-title']}>{slide.subTitle}</h4>
-                    <p className={styles['hvac-slide-desc']}>
-                      {slide.subDesc.split('\n').map((line, i) => (
-                        <span key={i}>
-                          {line}
-                          <br />
-                        </span>
-                      ))}
-                    </p>
-                    <Link href={slide.link.href} className={styles['hvac-slide-btn']}>
-                      {slide.link.label}
-                    </Link>
+                    {slide.subs.map((sub) => (
+                      <div key={sub.subTitle} className={styles['hvac-sub-item']}>
+                        <h4 className={styles['hvac-slide-title']}>{sub.subTitle}</h4>
+                        <p className={styles['hvac-slide-desc']}>
+                          {sub.subDesc.split('\n').map((line, i) => (
+                            <span key={i}>
+                              {line}
+                              <br />
+                            </span>
+                          ))}
+                        </p>
+                        <Link href={sub.link.href} className={styles['hvac-slide-btn']}>
+                          {sub.link.label}
+                        </Link>
+                      </div>
+                    ))}
                   </div>
                 </SwiperSlide>
               ))}
